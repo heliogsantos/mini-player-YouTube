@@ -10,6 +10,7 @@ import {
 } from './style.js';
 import FalaDev from '../../assets/videos/falaDev.mp4';
 import IconArrow from '../IconArrow/Button.js';
+import CardVideo from '../CardVideo/CardVideo.js';
 
 const Player = () => {
   const [activePlayer, setActivePlayer] = React.useState(false);
@@ -46,7 +47,11 @@ const Player = () => {
         </div>
       </Description>
 
-      <List></List>
+      <List>
+        {[1, 2, 3, 4, 3, 4, 5, 76].map((item, index) => (
+          <CardVideo key={index} />
+        ))}
+      </List>
     </Wrapper>
   );
 };

@@ -91,8 +91,18 @@ export const Description = styled.div`
 `;
 
 export const List = styled.div`
-  display: flex;
   width: 100%;
   border: 1px solid #e5e5e5;
+  max-height: 300px;
   height: 300px;
+  overflow-y: auto;
+  padding: 30px 20px 1px 20px;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+  }
 `;

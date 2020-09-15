@@ -16,12 +16,12 @@ const Player = () => {
   const [activePlayer, setActivePlayer] = React.useState(false);
 
   const handleClick = () => {
-    setActivePlayer((activePlayer) => !activePlayer);
+    setActivePlayer((togglePlayer) => {});
   };
 
   const handleClickOpenPlayer = () => {
     if (!activePlayer) {
-      return setActivePlayer((active) => (active = true));
+      return setActivePlayer((active) => !active);
     }
   };
 

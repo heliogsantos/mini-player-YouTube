@@ -8,9 +8,9 @@ const IconArrow = ({ playerActive, isCollapsed }) => {
   const [active, setActive] = React.useState(false);
 
   const disabledPlayer = () => {
-    setActive((active) => (active = true));
+    setActive((showPlayer) => !showPlayer);
     setTimeout(() => {
-      setActive((activePlayer) => !activePlayer);
+      setActive((hiddenPlayer) => !hiddenPlayer);
     }, 200);
   };
 

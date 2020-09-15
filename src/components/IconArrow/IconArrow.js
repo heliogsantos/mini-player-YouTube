@@ -10,15 +10,15 @@ const IconArrow = ({ playerActive, isCollapsed }) => {
   const disabledPlayer = () => {
     setActive((active) => (active = true));
     setTimeout(() => {
-      setActive((active) => (active = false));
+      setActive((activePlayer) => !activePlayer);
     }, 200);
   };
 
   React.useEffect(() => {
-    setIcon((icon) => (icon === ArrowIconTop ? ArrowIconDown : ArrowIconTop));
+    setIcon((iconArrow) =>
+      iconArrow === ArrowIconTop ? ArrowIconDown : ArrowIconTop,
+    );
     if (isCollapsed) {
-      disabledPlayer();
-    } else {
       disabledPlayer();
     }
   }, [isCollapsed]);

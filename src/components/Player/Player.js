@@ -9,7 +9,7 @@ import {
   List,
 } from './style.js';
 import FalaDev from '../../assets/videos/falaDev.mp4';
-import IconArrow from '../IconArrow/Button.js';
+import IconArrow from '../IconArrow/IconArrow.js';
 import CardVideo from '../CardVideo/CardVideo.js';
 
 const Player = () => {
@@ -21,7 +21,7 @@ const Player = () => {
 
   const handleClickOpenPlayer = () => {
     if (!activePlayer) {
-      return setActivePlayer((activePlayer) => (activePlayer = true));
+      return setActivePlayer((active) => (active = true));
     }
   };
 
